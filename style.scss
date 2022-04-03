@@ -1,0 +1,128 @@
+//
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.heading{
+  &-sub{
+    font-weight: lighter;
+  }
+}
+
+.list {
+  list-style: none;
+
+  &-item {
+    cursor: pointer;
+    display: inline;
+    padding: 2rem;
+  }
+
+  &-link {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.nav {
+  &-logo {
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+
+  &-title {
+    cursor: pointer;
+    font-size: 2.5rem;
+  }
+}
+
+.header {
+  margin: 2.5rem;
+  font-size: 2rem;
+  border-radius: 7px;
+  background: url(./Assets/hero.jpg);
+  box-shadow: 0 4px 3px 3px #333 ;
+  background-position: top center;
+  background-size: cover;
+  height: calc(100vh - 5rem);
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+  &-text {
+    display: flex;
+    height: 90%;
+    padding: 5rem;
+
+    &-1 {
+      font-size: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &title {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &-2 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 3rem;
+      text-transform: uppercase;
+
+      &-div {
+        flex: 0 1 28%;
+        font-weight: 100;
+
+        &:nth-child(n+3) {
+          flex: 0 1 23%;
+          font-size: 1.8rem;
+          margin-left: auto;
+          transform: rotate(90deg);
+          transform-origin: bottom;
+          border-bottom: 0.5rem solid#333;
+        }
+      }
+      &-p{
+        font-size: 1.2rem;
+        text-transform: lowercase;
+        text-indent: 2rem;
+      }
+    }
+  }
+  &-filter {
+    flex: 1 1 100%;
+    height: 50%;
+    margin-top: 7rem;
+    background-color: RGBA(211, 193, 82, 0.3);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    backdrop-filter: contrast(1);
+  }
+}
